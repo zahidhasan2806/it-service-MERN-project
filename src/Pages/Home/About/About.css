@@ -1,0 +1,10 @@
+.about{
+    background-image: url(../../../Images/about.jpg);
+    background-size: inherit;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    height: 500px;
+}
+.aboutInfo{
+    background: #FF7C66;
+}

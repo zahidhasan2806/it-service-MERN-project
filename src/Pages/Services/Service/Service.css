@@ -1,0 +1,6 @@
+.serviceBtn{
+    background-color: rgba(7,195,157,1);
+}
+.serviceBtn:hover{
+    background-color: rgba(198,27,97,1);
+}

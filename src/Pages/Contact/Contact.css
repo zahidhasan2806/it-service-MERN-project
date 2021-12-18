@@ -1,0 +1,9 @@
+.contact{
+    height: 400px;
+background-image: url(../../Images/contact.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+}
+.text{
+    font-size: 50px;
+}

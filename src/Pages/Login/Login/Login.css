@@ -1,0 +1,17 @@
+.login{
+    height: 100vh;
+    background-image: url(../../../Images/bg.svg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  
+}
+.loginBtn{
+    background: #EBFBF6;
+}
+
+@media only screen and (max-width: 768px){
+  .login{
+    background: #EBFBF6;
+ 
+  }
+}

@@ -1,0 +1,5 @@
+.navItem{
+    background: rgb(198,27,97);
+background: linear-gradient(90deg, rgba(198,27,97,1) 0%, rgba(74,89,173,1) 50%, rgba(7,195,157,1) 100%);
+color: white;
+}
