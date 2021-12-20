@@ -13,6 +13,7 @@ const useFirebase = () => {
     const [name, SetName] = useState(" ");
     const [email, SetEmail] = useState(" ");
     const [password, SetPassword] = useState(" ");
+    const [admin, setAdmin] = useState(false);
 
     const getNewUserEmail = (event) => {
         SetEmail(event.target.value);
@@ -95,7 +96,7 @@ const useFirebase = () => {
 
     const storeUserDb = (email, displayName) => {
         const user = { email, displayName };
-        fetch("http://localhost:5000/users", {
+        fetch("https://mighty-basin-01559.herokuapp.com/users", {
             method: 'POST',
             headers: {
                 "content-type": "application/json"
@@ -107,7 +108,7 @@ const useFirebase = () => {
     //store google user in Db
     const storeGoogleUserDb = (email, displayName) => {
         const user = { email, displayName };
-        fetch("http://localhost:5000/users", {
+        fetch("https://mighty-basin-01559.herokuapp.com/users", {
             method: 'PUT',
             headers: {
                 "content-type": "application/json"
@@ -115,6 +116,12 @@ const useFirebase = () => {
             body: JSON.stringify(user)
         }).then()
     };
+
+    useEffect(() => {
+        fetch(`https://mighty-basin-01559.herokuapp.com/users/${user.email}`)
+            .then(res => res.json())
+            .then(data => setAdmin(data.admin))
+    }, [user.email])
 
 
     return {
@@ -129,7 +136,7 @@ const useFirebase = () => {
         storeUserDb,
         storeGoogleUserDb,
         handleSubmitForm, getNewUserName,
-        getNewUserEmail, getNewUserPassword, signInWithEmail, emailVerification, setUserName
+        getNewUserEmail, getNewUserPassword, signInWithEmail, emailVerification, setUserName, admin
     }
 };
 

@@ -18,7 +18,7 @@ const Serviceservices = () => {
 
     const { id } = useParams();
     useEffect(() => {
-        fetch(`http://localhost:5000/services/${id}`)
+        fetch(`https://mighty-basin-01559.herokuapp.com/services/${id}`)
             .then(res => res.json())
             .then(data => setServices(data))
             .finally(() => setIsLoading(false))
@@ -27,7 +27,7 @@ const Serviceservices = () => {
     // handle submit
     const onSubmit = data => {
 
-        axios.post('http://localhost:5000/orders', data)
+        axios.post('https://mighty-basin-01559.herokuapp.com/orders', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert("Service Booked Successfully!!");

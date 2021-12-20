@@ -7,11 +7,11 @@ const About = () => {
             <Col md={6} className=''>
 
             </Col>
-            <Col md={6} className='pt-5 aboutInfo'>
+            <Col md={6} className='pt-5 aboutInfo text-white'>
                 <p className='title'>About us</p>
                 <h4 className='text'>Explore About <br /> Painting Services <br /> Success History</h4>
-                <h6>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam eos non placeat.</h6>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus quibusdam expedita mollitia, aspernatur neque eos. Eaque nobis quas id, natus iste nam optio hic maiores quidem libero. Ab asperiores recusandae eos amet libero sed quam iusto quos, accusantium nobis, officia quasi eum saepe? Eaque ut perferendis, nostrum impedit quae eius?</p>
+                <h6>The Painting Company is the top Residential & Commercial Painting Company serving near you.</h6>
+                <p>At The Painting Company, we believe in exceptional customer service and integrity of our work. What this means to us is that we are not satisfied until you are satisfied. We go the extra mile with each and every customer to ensure the highest level of customer service. It is the consistent flow of happy customers that keeps us growing strong.</p>
             </Col>
         </Row>
     );
