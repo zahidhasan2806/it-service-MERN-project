@@ -6,7 +6,7 @@ import ManageAllService from '../ManageAllService/ManageAllService';
 const ManageAllServices = () => {
     const [services, setServices] = useState([]);
     useEffect(() => {
-        const url = "http://localhost:5000/services";
+        const url = "https://mighty-basin-01559.herokuapp.com/services";
         fetch(url)
             .then(res => res.json())
             .then(data => setServices(data))

@@ -11,7 +11,7 @@ const AddNewService = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const onSubmit = data => {
         let picture1 = fileInput.current.files[0]
-        let picture2 = fileInput.current.files[0]
+        let picture2 = fileInput2.current.files[0]
         const formData = new FormData();
         for (var key in data) {
             formData.append(key, data[key]); // formdata doesn't take objects
@@ -19,13 +19,13 @@ const AddNewService = () => {
         formData.append('picture1', picture1)
         formData.append('picture2', picture2)
 
-
-        fetch('http://localhost:5000/services', {
+        fetch('https://mighty-basin-01559.herokuapp.com/services', {
             method: 'POST',
             body: formData
         })
             .then(response => response.json())
             .then(result => {
+
                 if (result.insertedId) {
                     Swal.fire("Success");
                     reset()
