@@ -12,35 +12,35 @@ const Dashboard = () => {
     return (
         <Row className="me-0 px-0">
             <Col md={3} className="px-0" >
-                <Navbar collapseOnSelect expand="md" bg="dark" variant="dark" >
+                <Navbar collapseOnSelect expand="md"  >
                     <Container className="d-flex flex-column dashboard-route">
 
-                        <Navbar.Brand className="text-white me-auto fs-2 fw-bold" href="/home">Colorzen</Navbar.Brand>
+                        <Navbar.Brand className="text-dark me-auto fs-2 fw-bold" href="/home">Colorzen</Navbar.Brand>
                         <hr className="w-100 bg-white" />
 
-                        <Navbar.Text className="text-white my-1 fs-4 text-start me-auto">
-                            <FontAwesomeIcon className="text-white" icon={faColumns} />    Dashboard
+                        <Navbar.Text className="text-dark my-1 fs-4 text-start me-auto">
+                            <FontAwesomeIcon className="text-dark" icon={faColumns} />    Dashboard
                         </Navbar.Text>
 
                         <Navbar.Toggle className="me-auto text-start" aria-controls="responsive-navbar-nav" />
                         <Navbar.Collapse className="me-auto text-start" id="responsive-navbar-nav">
                             <Nav className="d-flex flex-column fs-6">
                                 {/* {!admin && <>  */}
-                                <Nav.Link as={Link} to="/dashboard/myorders"><FontAwesomeIcon icon={faShoppingCart} /> My Orders</Nav.Link> <br />
+                                <Nav.Link className='text-dark fw-bold' as={Link} to="/dashboard/myorders"><FontAwesomeIcon icon={faShoppingCart} /> My Orders</Nav.Link> <br />
 
-                                <Nav.Link as={Link} to="/dashboard/reviews"> <FontAwesomeIcon icon={faComment} /> Review</Nav.Link><br />
+                                <Nav.Link className='text-dark fw-bold' as={Link} to="/dashboard/reviews"> <FontAwesomeIcon icon={faComment} /> Review</Nav.Link><br />
 
-                                <Nav.Link as={Link} to="/dashboard/payment"><FontAwesomeIcon icon={faFileInvoice} /> Payment</Nav.Link><br />
+                                <Nav.Link className='text-dark fw-bold' as={Link} to="/dashboard/payment"><FontAwesomeIcon icon={faFileInvoice} /> Payment</Nav.Link><br />
                                 {/* </>}
                                 {admin && <div> */}
-                                <Nav.Link as={Link} to="/dashboard/manageallorders"> <FontAwesomeIcon icon={faShoppingBasket} /> Manage All Orders</Nav.Link><br />
-                                <Nav.Link as={Link} to="/dashboard/manageproducts"> <FontAwesomeIcon icon={faTasks} /> Manage Products</Nav.Link><br />
-                                <Nav.Link as={Link} to="/dashboard/addnewproduct"><FontAwesomeIcon icon={faFolderPlus} /> Add A Product</Nav.Link><br />
-                                <Nav.Link as={Link} to="/dashboard/makeadmin"><FontAwesomeIcon icon={faUserShield} /> Make Admin</Nav.Link><br />
+                                <Nav.Link className='text-dark fw-bold' as={Link} to="/dashboard/manageallorders"> <FontAwesomeIcon icon={faShoppingBasket} /> Manage All Orders</Nav.Link><br />
+                                <Nav.Link className='text-dark fw-bold' as={Link} to="/dashboard/manageservices"> <FontAwesomeIcon icon={faTasks} /> Manage Services</Nav.Link><br />
+                                <Nav.Link className='text-dark fw-bold' as={Link} to="/dashboard/addnewservice"><FontAwesomeIcon icon={faFolderPlus} /> Add A Service</Nav.Link><br />
+                                <Nav.Link className='text-dark fw-bold' as={Link} to="/dashboard/makeadmin"><FontAwesomeIcon icon={faUserShield} /> Make Admin</Nav.Link><br />
                                 {/* </div>} */}
-                                <hr className="w-100 mx-auto text-white" />
+                                <hr className="w-100 mx-auto text-dark" />
 
-                                <h6 className="text-white ">{admin ? <FontAwesomeIcon icon={faUserShield} /> : <FontAwesomeIcon icon={faUser} />}   {user.displayName}</h6>
+                                <h6 className="text-dark ">{admin ? <FontAwesomeIcon icon={faUserShield} /> : <FontAwesomeIcon icon={faUser} />}   {user.displayName}</h6>
                                 <Link to="/"><Button variant="dark" onClick={logOut}><FontAwesomeIcon icon={faSignOutAlt} /> Logout</Button></Link>
                             </Nav>
                         </Navbar.Collapse>

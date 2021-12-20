@@ -3,8 +3,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Button } from 'react-bootstrap';
 import Swal from 'sweetalert2';
+import useAuth from '../../../../Hooks/useAuth';
 
 const ManageAllOrder = (props) => {
+    const { admin } = useAuth()
     const { name, service, address, date, Contact, status, _id, email } = props.order
 
     const handleDelete = (id) => {
@@ -72,13 +74,15 @@ const ManageAllOrder = (props) => {
                 {status}
             </td>
             <td>
-                <Button onClick={handleUpdateStatus} variant="secondary" className="btn btn-success w-100">
+                {admin ? <Button onClick={handleUpdateStatus} variant="secondary" className="btn btn-success w-100">
                     Confirm
-                </Button>
+                </Button> : <Button onClick={handleUpdateStatus} variant="secondary" disabled className="btn btn-success w-100">
+                    Confirm
+                </Button>}
 
 
             </td>
-            <td><button onClick={() => { handleDelete(_id) }} className="btn btn-danger w-100">Delete</button></td>
+            <td>{admin ? <button onClick={() => { handleDelete(_id) }} className="btn btn-danger w-100">Delete</button> : <button onClick={() => { handleDelete(_id) }} className="btn btn-danger w-100" disabled>Delete</button>}</td>
         </tr >
     );
 };

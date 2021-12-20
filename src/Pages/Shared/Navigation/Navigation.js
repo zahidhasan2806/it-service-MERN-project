@@ -22,14 +22,14 @@ const Navigation = () => {
 
                         {
                             !user?.email ?
-                                <Nav.Link as={NavLink} to="/login">Login</Nav.Link> :
+                                <Nav.Link as={NavLink} to="/login" className='text-white fw-bold fs-6 '>Login</Nav.Link> :
                                 <>
-                                    <Nav.Link as={NavLink} to="/dashboard">
+                                    <Nav.Link as={NavLink} to="/dashboard" className='text-white fw-bold fs-6 '>
                                         Dashboard
                                     </Nav.Link>
                                     <Button as={NavLink} to="/home" onClick={logOut} variant="dark">Log-out</Button>
                                     <Navbar.Text className="ms-2">
-                                        <a className="text-decoration-none" href="#login">{user?.displayName}</a>
+                                        <a className="text-decoration-none text-white fw-bold fs-6" href="#login" >{user?.displayName}</a>
                                     </Navbar.Text>
                                 </>
                         }

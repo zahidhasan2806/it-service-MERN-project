@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { Alert, Button, FloatingLabel, Form } from 'react-bootstrap';
+import useAuth from '../../../Hooks/useAuth';
 
 const MakeAdmin = () => {
+    const { admin } = useAuth()
     const [email, SetEmail] = useState("")
     const [confirm, setConfirm] = useState(false)
     const handleAdminEmail = (e) => {
@@ -36,11 +38,11 @@ const MakeAdmin = () => {
                 >
                     <Form.Control type="email" placeholder="name@example.com" onBlur={handleAdminEmail} />
                 </FloatingLabel>
-                <Button type="submit" variant="outline-success" className="mt-3">Make Admin</Button>
+                {admin ? <Button type="submit" variant="outline-success" className="mt-3">Make Admin</Button> : <Button type="submit" disabled variant="outline-success" className="mt-3">Make Admin</Button>}
                 {confirm && <Alert variant="success">
                     Made admin successfully!
                 </Alert>}
-
+                <Alert variant='danger'>This section only for Admin.Here admin can make another admin.</Alert>
             </Form>
         </div>
     );

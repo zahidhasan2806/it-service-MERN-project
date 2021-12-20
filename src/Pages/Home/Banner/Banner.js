@@ -17,8 +17,8 @@ const Banner = () => {
                         <div style={{ height: "100vh" }} className='d-flex align-items-center justify-content-center'>
                             <div>
 
-                                <h1 className='fw-bold'>Painting Houses is <br /> Our Passion</h1>
-                                <p>We make it a priority to offer flexible services to accommodate you needs .</p>
+                                <h1 className='fw-bold text'>Painting Houses is <br /> Our Passion</h1>
+                                <p className='fw-bold fs-5'>We make it a priority to offer flexible services to accommodate you needs .</p>
                                 <Button variant='success' as={Link} to='/contact' className='bannerBtn p-3 fw-bold'>Get in Touch <FontAwesomeIcon icon={faArrowRight} /></Button>
                             </div>
                         </div>

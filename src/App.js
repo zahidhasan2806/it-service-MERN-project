@@ -18,6 +18,8 @@ import 'aos/dist/aos.css';
 import ManageAllOrders from './Pages/Dashboard/ManageAllOrders/ManageAllOrders/ManageAllOrders';
 import Payment from './Pages/Dashboard/Payment/Payment/Payment';
 import Profile from './Pages/Dashboard/Profile/Profile';
+import AddNewService from './Pages/Dashboard/AddNewService/AddNewService';
+import ManageAllServices from './Pages/Dashboard/ManageAllServices/ManageAllServices/ManageAllServices';
 AOS.init();
 function App() {
   return (
@@ -47,14 +49,9 @@ function App() {
               <Route path="/dashboard/payment" element={<Payment />}>
               </Route>
               <Route path="/dashboard/manageallorders" element={<ManageAllOrders />}>
-
               </Route>
-              {/* <AdminRoute path="${path}/manageproducts">
-                        <ManageProducts></ManageProducts>
-                    </AdminRoute> */}
-              {/* <AdminRoute path="${path}/addnewproduct">
-                        <AddNewProduct></AddNewProduct>
-                    </AdminRoute> */}
+              <Route path="/dashboard/addnewservice" element={<AddNewService />}></Route>
+              <Route path="/dashboard/manageservices" element={<ManageAllServices />}></Route>
               <Route path="/dashboard/makeadmin" element={<MakeAdmin />}>
               </Route>
 

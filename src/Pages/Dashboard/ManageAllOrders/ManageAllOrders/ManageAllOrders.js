@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Container, Table } from 'react-bootstrap';
+import { Alert, Container, Table } from 'react-bootstrap';
 import ManageAllOrder from '../ManageAllOrder/ManageAllOrder';
 
 const ManageAllOrders = () => {
@@ -36,7 +36,7 @@ const ManageAllOrders = () => {
                     }
                 </tbody>
             </Table>
-
+            <Alert variant='danger'>This section only for Admin.Here admin can delete and confirm shipping status</Alert>
         </Container >
     );
 };

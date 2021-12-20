@@ -37,7 +37,7 @@ const Serviceservices = () => {
             })
     };
 
-
+    const { name, phone, time, desc, price, image1, image2 } = services;
 
     if (isloading) {
         return <div className="d-flex justify-content-center">
@@ -59,7 +59,7 @@ const Serviceservices = () => {
                             <Col md={6}>
                                 <Row className='g-0' style={{ background: "linear-gradient(to right, #d9a7c7, #fffcdc)" }}>
                                     <Col md={6}>
-                                        <img style={{ height: "300px" }} data-aos="fade-right" className='img-fluid rounded shadow w-100' src={services.picture2} alt="" />
+                                        <img style={{ height: "300px" }} data-aos="fade-right" className='img-fluid rounded shadow w-100' src={`data:image/png;base64,${image1}`} alt="" />
                                     </Col>
                                     <Col md={6}>
 
@@ -68,18 +68,18 @@ const Serviceservices = () => {
 
                                     </Col>
                                     <Col md={6}>
-                                        <img style={{ height: "300px" }} data-aos="fade-left" className='img-fluid rounded shadow w-100' src={services.picture1} alt="" />
+                                        <img style={{ height: "300px" }} data-aos="fade-left" className='img-fluid rounded shadow w-100' src={`data:image/png;base64,${image2}`} alt="" />
                                     </Col>
                                 </Row>
                             </Col>
                             <Col md={6}>
-                                <h2 className="py-5 project-title">{services.name}</h2>
-                                <p><span className="fs-5 fw-bold">Description: </span><br /><br />{services.desc}</p>
+                                <h2 className="py-5 project-title">{name}</h2>
+                                <p><span className="fs-5 fw-bold">Description: </span><br /><br />{desc}</p>
 
-                                <p><span className="fs-5 fw-bold">Avaiable Time: </span>{services.time}</p>
+                                <p><span className="fs-5 fw-bold">Avaiable Time: </span>{time}</p>
 
-                                <p className="fs-5 fw-bold">Phone:    {services.phone}</p>
-                                <p className="fs-5 fw-bold">Price:$ {services.price}</p>
+                                <p className="fs-5 fw-bold">Phone:    {phone}</p>
+                                <p className="fs-5 fw-bold">Price:$ {price}</p>
                                 <Button className='text-white' onClick={handleShow} style={{
                                     'background': 'linear-gradient(90deg, rgba(198,27,97,1) 0%, rgba(74,89,173,1) 50%, rgba(7,195,157,1) 100%)'
                                 }} variant='none'>Make an Order</Button>

@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom';
 import "./Service.css"
 
 const Service = (props) => {
-    const { name, picture1, price, _id } = props.service
+    const { name, image1, price, _id } = props.service
     return (
         <Col md={4}>
             <Card className="mx-1  shadow">
-                <Card.Img style={{ height: "250px" }} variant="top" src={picture1} />
+                <Card.Img style={{ height: "250px" }} variant="top" src={`data:image/png;base64,${image1}`} />
                 <Card.Body>
                     <Card.Title>{name}</Card.Title>
                     <Card.Text>
