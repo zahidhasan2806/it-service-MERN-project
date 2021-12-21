@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Card, Container } from 'react-bootstrap';
+import { Alert, Button, Card, Container } from 'react-bootstrap';
 import useAuth from '../../../Hooks/useAuth';
 
 const Profile = () => {
@@ -28,6 +28,7 @@ const Profile = () => {
                     </div>
                 </Card.Body>
             </Card>
+            <Alert variant='success' className='fw-bold'>To check Admin role login with "admin@admin.com" and password "123456"</Alert>
         </Container>
     );
 };

@@ -1,8 +1,14 @@
-    .gallery {
-        transition: transform .2s ease-in-out; 
-        overflow: hidden;
-    }
-  
-  .gallery:hover {
-    transform: scale(1.2); 
+  .galleryCol{
+  overflow: hidden;
+  }
+
+  .galleryCol img {
+  width: 100%;
+  height: 100%;
+  margin-bottom:-5px ;
+  transition: all 0.3s ease-out; 
+  }
+
+  .galleryCol:hover img{
+  transform: scale(1.2,1.2); 
   }

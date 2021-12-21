@@ -15,19 +15,19 @@ const FeatureServices = () => {
             <Container>
                 <div className='text-center ' data-aos="fade-right">
                     <Row className='aboutService text-white'>
-                        <Col className='opacity-75 p-3' style={{ "backgroundColor": 'rgba(198,27,97,1)' }}>
+                        <Col className='aboutBg1 p-3' style={{}}>
                             <h1>  <FontAwesomeIcon icon={faHome} /> 1.5k</h1>
                             <h2>Project has completed</h2>
                         </Col>
-                        <Col className='opacity-75 p-3' style={{ "backgroundColor": 'rgba(74,89,173,1)' }}>
+                        <Col className='aboutBg2 p-3'>
                             <h1>     <FontAwesomeIcon icon={faUserCog} /> 25</h1>
                             <h2>Professional Employe in the company</h2>
                         </Col>
-                        <Col className='opacity-75 p-3' style={{ "backgroundColor": 'rgba(7,195,157,1) ' }}>
+                        <Col className='aboutBg3 p-3'>
                             <h1>            <FontAwesomeIcon icon={faUserTie} /> 10+</h1>
                             <h2>Customers benifit Everyday</h2>
                         </Col>
-                        <Col className='opacity-75 p-3' style={{ "backgroundColor": 'rgba(198,27,97,1)' }}>
+                        <Col className='aboutBg1 p-3'>
                             <h1><FontAwesomeIcon icon={faAward} />  3</h1>
                             <h2>Received Awards & Certifications</h2>
                         </Col>
